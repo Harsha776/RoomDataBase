@@ -9,5 +9,7 @@ import androidx.room.PrimaryKey
 data class Notes (
     @PrimaryKey(autoGenerate = true) var id:Int?=null,
     @ColumnInfo(name="name")
-    var name:String?=""
+    var name:String?="",
+    @ColumnInfo(name="isTaskCompleted")
+    var isTaskCompleted:Boolean=false
 )

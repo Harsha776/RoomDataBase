@@ -18,4 +18,7 @@ interface NotesDuo {
 
     @Delete
     fun delete(notes: Notes)
+
+    @Query("Delete from notesdata where isTaskCompleted=:status")
+    fun deleteNotesStatus(status:Boolean)
 }
