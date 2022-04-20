@@ -14,14 +14,16 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
-      lateinit var button:Button
+      lateinit var save:Button
+    lateinit var btnUpdate:Button
+    lateinit var btnChangeStatus:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        button=findViewById(R.id.save)
+        save=findViewById(R.id.save)
         getdata()
-        button.setOnClickListener {
-            updateData()
+        save.setOnClickListener {
+            addNotesToDb()
 
         }
         setUpWorkManager()
